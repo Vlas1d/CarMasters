@@ -1,7 +1,6 @@
 @import '../../var';
 
 .button {
-
     height: 45px;
     padding: 0px 40px;
 
@@ -12,6 +11,8 @@
     line-height: 14.364px;
     letter-spacing: 0.32px;
     text-transform: uppercase;
+
+    align-self: flex-start; //-------------------------------------------------------------
 
     &:hover {
         color: $hover-primary;

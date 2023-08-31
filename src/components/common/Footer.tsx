@@ -7,6 +7,8 @@ import logo from '../../images/svg/logo-light.svg';
 import instagram from '../../images/svg/instagram.svg';
 import facebook from '../../images/svg/facebook.svg';
 import youtube from '../../images/svg/youtube.svg';
+import logoId from '../../images/svg/logo-id.svg';
+
 
 const Footer = () => {
     return (
@@ -29,6 +31,14 @@ const Footer = () => {
                 <a href="https://youtube.com" target="_blank">
                     <img src={youtube} alt="youtube" />
                 </a>
+            </div>
+            <div className={s.footer__copyright}>
+                <span>Created by
+                    <img src={logoId} alt="logo" />
+                </span>
+                <span>
+                    ©Copyright, 2020. Vehicle Approval
+                </span>
             </div>
         </div>
     );
