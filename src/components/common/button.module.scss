@@ -1,0 +1,42 @@
+@import '../../var';
+
+.button {
+
+    height: 45px;
+    padding: 0px 40px;
+
+    border-radius: 2px;
+
+    font-family: 'Gilroy-700';
+    font-size: 16px;
+    line-height: 14.364px;
+    letter-spacing: 0.32px;
+    text-transform: uppercase;
+
+    &:hover {
+        color: $hover-primary;
+        border: 1px solid $hover-primary;
+    }
+
+    &__dark {
+        color: #fff;
+        background: $primary-accent;
+        border: 0px;
+
+        &:hover {
+            color: #fff;
+            background: $hover-primary;
+            border: 0px;
+        }
+    }
+
+    &__light {
+        color: $primary-accent;
+        border: 1px solid $primary-accent;
+
+        &:hover {
+            color: $hover-primary;
+            border: 1px solid $hover-primary;
+        }
+    }
+}

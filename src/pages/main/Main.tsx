@@ -6,11 +6,11 @@ import '../../style.scss';
 import s from './main.module.scss';
 //------------------
 
-//-------components
+//-------images
 
 //------------------
 
-//-------images
+//-------components
 
 //------------------
 
