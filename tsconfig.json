@@ -1,0 +1,27 @@
+{
+    "compilerOptions": {
+        "baseUrl": "src",
+        "outDir": "./build/",
+        "target": "es5",
+        "lib": [
+            "dom",
+            "dom.iterable",
+            "esnext"
+        ],
+        "allowJs": true,
+        "jsx": "react",
+        "module": "CommonJS",
+        "moduleResolution": "node",
+        "strict": true,
+        "esModuleInterop": true,
+        "paths": {
+            "@/*": [
+                "*"
+            ]
+        }
+    },
+    "include": [
+        "src",
+        "declaration.d.ts",
+    ]
+}

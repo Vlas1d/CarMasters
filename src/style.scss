@@ -1,0 +1,50 @@
+@import './reset';
+@import './fonts';
+
+body {
+    overflow-x: hidden;
+}
+
+h1 {
+    
+}
+h2 {
+    
+}
+h3 {
+    
+}
+
+.header {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+
+    width: 100vw;
+
+    z-index: 999;
+}
+
+.wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    overflow-x: hidden;
+}
+.containerFull {
+    position: relative;
+    width: 100%;
+    margin: 0px auto;
+}
+.container {
+    position: relative;
+    max-width: 1150px;
+    width: 100%;
+
+    padding-left: 25px;
+    padding-right: 25px;
+
+    margin: 0px auto;
+}
