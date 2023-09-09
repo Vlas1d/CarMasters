@@ -12,6 +12,7 @@ interface ButtonProps {
     theme: Theme;
     onClick?: () => void;
     isDisabled?: boolean;
+    enabled?: boolean;
 }
 
 const Button = (props: ButtonProps) => {
@@ -19,7 +20,7 @@ const Button = (props: ButtonProps) => {
 
     return (
         <button
-            className={`${s.button} ${theme === Theme.Dark ? s.button__dark : s.button__light}`}
+            className={`${s.button} ${theme === Theme.Dark ? s.button__dark : s.button__light} ${s.disabled}`}
             onClick={onClick}
         >
             {text}

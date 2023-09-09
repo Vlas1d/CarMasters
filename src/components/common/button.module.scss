@@ -40,4 +40,8 @@
             border: 1px solid $hover-primary;
         }
     }
+
+    .disabled {
+        display: none;
+    }
 }

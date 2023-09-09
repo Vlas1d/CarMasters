@@ -1,0 +1,125 @@
+@import '../../var';
+
+.range {
+
+    max-width: 680px;
+    width: 100%;
+
+    &__text {
+        display: flex;
+        justify-content: space-between;
+
+        margin-bottom: 20px;
+    }
+    &__textName {
+        color: $primary-content;
+        font-family: 'Gilroy-600';
+        font-size: 20px;
+        line-height: 25px;
+    }
+
+    &__inputTrack {
+        position: relative;
+        width: 100%;
+        height: 8px;
+        border-radius: 2px;
+        padding: 0px 17px 0px 0px;
+
+        background: $secondary-s-color;
+
+        &:hover {
+            background: #c9c9c9;
+            .range__progress {
+                background: $hover-primary;
+                &::after {
+                    background: $hover-primary;
+                }
+            }
+        }
+
+        input {
+            position: absolute;
+            top: -4px;
+            left: 0px;
+            opacity: 0;
+            width: 100%;
+
+            cursor: pointer;
+        }
+        
+    }
+    &__progress {
+        position: relative;
+        width: 0%;
+        height: 100%;
+        border-radius: 2px 0px 0px 2px;
+
+        background: $primary-accent;
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0px;
+            right: 0px;
+
+            width: 18px;
+            height: 18px;
+            border-radius: 2px;
+            transform: translate(99%, -28%);
+
+            background: $primary-accent;
+            border: 1px solid #fff;
+        }
+    }
+    
+}
+
+.rangeValue {
+    display: flex;
+    gap: 5px;
+    margin-right: -10px;
+    
+    font-family: 'Gilroy-700';
+    font-size: 25px;
+    line-height: 140%;
+    letter-spacing: 0.5px;
+    color: $primary-content;
+
+    &__before {
+
+    }
+    &__after {
+        margin-top: 13px;
+        //align-self: flex-end;
+        font-size: 16px;
+        line-height: 14.364px;
+        letter-spacing: 0.32px;
+        text-transform: uppercase;
+        color: $secondary-text;
+    }
+
+    &__input {
+        position: relative;
+        color: transparent;
+
+        input {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            transform: translate(0px, 0%);
+            color: $primary-content;
+
+            width: 100%;
+            overflow: hidden;
+            outline: transparent;
+            border: transparent;
+            opacity: 1;
+
+            &::-webkit-outer-spin-button,
+            &::-webkit-inner-spin-button {
+                -webkit-appearance: none;
+                margin: 0;
+            }
+        }
+    }
+}

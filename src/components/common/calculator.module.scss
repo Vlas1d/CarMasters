@@ -1,0 +1,95 @@
+@import '../../var';
+
+.calculator {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+
+    &__inputs {
+        display: flex;
+        flex-direction: column;
+        max-width: 800px;
+        width: 100%;
+
+        gap: 70px;
+    }
+    &__result {
+        max-width: 370px;
+        width: 100%;
+
+        color: $secondary-text;
+        font-family: 'Gilroy-400';
+        font-size: 16px;
+        line-height: 180%;
+        letter-spacing: 0.32px;
+
+        & > *:not(:last-child) {
+            margin-bottom: 30px;
+        }
+    }
+    &__biWeekly, &__monthly, &__weekly {
+        display: flex;
+        flex-direction: column;
+    }
+    &__biWeekly {
+        span:last-child {
+            color: $primary-accent;
+            font-family: 'Gilroy-700';
+            font-size: 45px;
+            line-height: 140.5%;
+        }
+    }
+    &__monthly, &__weekly {
+        span:last-child {
+            color: $primary-content;
+            font-family: 'Gilroy-700';
+            font-size: 25px;
+            line-height: 140%;
+            letter-spacing: 0.5px;
+        }
+    }
+    
+    &__inputs, &__result {
+        padding: 60px;
+        border-radius: 5px;
+        background: #FFF;
+        box-shadow: 0px 20px 25px 0px rgba(0, 0, 0, 0.10);
+    }
+
+    &__price {
+        display: flex;
+        label {
+            display: flex;
+            padding: 0px 20px;
+            height: 50px;
+            align-self: left;
+            align-items: center;
+
+            color: $primary-accent;
+            border: 1px solid $primary-accent;
+            transition: 0.25s ease 0s;
+            cursor: pointer;
+            user-select: none;
+
+            text-align: center;
+            font-family: 'Gilroy-700';
+            font-size: 16px;
+            line-height: 14.364px;
+            letter-spacing: 0.32px;
+            text-transform: uppercase;
+
+            &:not(:last-child) {
+                border-right: 0px;
+            }
+        }
+        input {
+            position: absolute;
+            opacity: 0;
+            pointer-events: none;
+        }
+        input:checked + label {
+            background: $primary-accent;
+            color:#fff;
+        }
+    }
+}
