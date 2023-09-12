@@ -13,6 +13,7 @@ import TriangleStep from './components/common/TriangleStep';
 import Triangle from './components/common/Triangle';
 import Range from './components/common/Range';
 import Calculator from './components/common/Calculator';
+import MetricCard from './components/common/MetricCard';
 //------------------
 
 //-------images
@@ -50,6 +51,7 @@ const TestComponents = () => {
                 />
                 <Range min={0} max={500000} value={150000} name='Loan Amount' textBeforeVal='$' />
                 <Calculator />
+                <MetricCard num='7,988+' text='Sold Cars' />
             </div>
 
 
