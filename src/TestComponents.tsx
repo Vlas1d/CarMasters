@@ -14,12 +14,15 @@ import Triangle from './components/common/Triangle';
 import Range from './components/common/Range';
 import Calculator from './components/common/Calculator';
 import MetricCard from './components/common/MetricCard';
+import CardWithButton from './components/common/CardWithButton';
+import CardWithIcon from './components/common/CardWithIcon';
 //------------------
 
 //-------images
 import delivery from './images/svg/Delivery.svg';
 import car from './images/svg/Car.svg';
 import finance from './images/svg/Finance.svg';
+import procent from './images/svg/procent.svg';
 
 //------------------
 
@@ -52,6 +55,16 @@ const TestComponents = () => {
                 <Range min={0} max={500000} value={150000} name='Loan Amount' textBeforeVal='$' />
                 <Calculator />
                 <MetricCard num='7,988+' text='Sold Cars' />
+                <CardWithButton
+                    title='Our credit policy'
+                    text='You want to secure a loan that works for your budget. Here at VAC we work with Canada’s largest lenders to help you find the best interest rates and terms for your auto loan.'
+                    buttonText='Request a Car'
+                />
+                <CardWithIcon
+                    title='What are my interest rate options?'
+                    text='We work to secure customized auto loans from Canada’s largest lenders. Your interest rate is critical for determining the total cost of your auto financing. Interest rates are based on many factors including the loan amount, your credit score, and your budget. We help you find the lowest interest rates available for your auto loan.'
+                    icon={procent}
+                />
             </div>
 
 
