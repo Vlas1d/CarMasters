@@ -22,6 +22,7 @@ import VideoCard from './components/common/cards/VideoCard';
 import VideoPopUp from './components/modal/VideoPopUp';
 import MainSlider from './components/common/big/MainSlider';
 import QuizRadio from './components/common/QuizRadio';
+import QuizText, { Size } from './components/common/QuizText';
 //------------------
 
 //-------images
@@ -110,7 +111,34 @@ const TestComponents = () => {
                         ['Under $250/Month', '$250-374/Month', '$374-500/Month', 'Over $500/Month']
                     }
                 />
-
+                <QuizText
+                    question='Enter your monthly income'
+                    detail='Your income details help us make sure your vehicle payments are easy and affordable. Before taxes and deductions.'
+                    fields={
+                        [
+                            {
+                                size: Size.Full,
+                                placeholder: 'Monthly income'
+                            }
+                        ]
+                    }
+                />
+                <QuizText
+                    question='How long have you been earning this income?'
+                    detail='Your income details help us make sure your vehicle payments are easy and affordable.'
+                    fields={
+                        [
+                            {
+                                size: Size.Middle,
+                                placeholder: 'Years'
+                            },
+                            {
+                                size: Size.Middle,
+                                placeholder: 'Mounths'
+                            }
+                        ]
+                    }
+                />
             </div>
             <MainSlider />
 

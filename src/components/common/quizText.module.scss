@@ -1,0 +1,51 @@
+@import '../../var';
+
+.quizText {
+    max-width: 454px;
+    width: 100%;
+
+    h4 {
+        margin-bottom: 5px;
+    }
+    & > span {
+        display: block;
+        margin-bottom: 40px;
+
+        color: $text-color;
+        font-family: 'Gilroy-400';
+        font-size: 16px;
+        line-height: 159%;
+    }
+
+    &__fields {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        input {
+            display: inline-flex;
+            align-items: center;
+            padding: 0px 20px;
+            width: 100%;
+            height: 45px;
+
+            border-radius: 2px;
+            border: 1px solid $secondary-s-color;
+            background:#FFF;
+
+            color: $text-color;
+            font-family: 'Gilroy-600';
+            font-size: 16px;
+            line-height: 14.364px;
+
+            &::placeholder {
+                color: $secondary-s-color;
+                font-family: 'Gilroy-500';
+                font-size: 16px;
+                line-height: 159%;
+            }
+            &:focus {
+                outline: 1px solid $hover-primary;
+            }
+        }
+    }
+}
