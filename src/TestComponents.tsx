@@ -20,6 +20,8 @@ import BlogCard from './components/common/cards/BlogCard';
 import InventoryCard from './components/common/cards/InventoryCard';
 import VideoCard from './components/common/cards/VideoCard';
 import VideoPopUp from './components/modal/VideoPopUp';
+import MainSlider from './components/common/big/MainSlider';
+import QuizRadio from './components/common/QuizRadio';
 //------------------
 
 //-------images
@@ -101,8 +103,16 @@ const TestComponents = () => {
                     name={`VAC's Vehicle Shoot #10: 2018 Chevy Cruze Hatchback`}
                     iframe={youtubeVideo}
                 />
-            </div>
+                <QuizRadio
+                    question="What's your budget?"
+                    detail='Find vehicle options that fit your budget.'
+                    answers={
+                        ['Under $250/Month', '$250-374/Month', '$374-500/Month', 'Over $500/Month']
+                    }
+                />
 
+            </div>
+            <MainSlider />
 
         </div>
     );

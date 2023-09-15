@@ -1,0 +1,64 @@
+@import '../../var';
+
+.quizRadio {
+    max-width: 454px;
+    width: 100%;
+
+    h4 {
+        margin-bottom: 5px;
+    }
+    & > span {
+        display: block;
+        margin-bottom: 40px;
+
+        color: $text-color;
+        font-family: 'Gilroy-400';
+        font-size: 16px;
+        line-height: 159%;
+    }
+
+    &__answers {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        input {
+            pointer-events: none;
+            position: absolute;
+            opacity: 0;
+            z-index: -1;
+        }
+        label {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 222px;
+            min-height: 45px;
+            border: 1px solid #a2a2a26a;
+            background: #fff;
+            border-radius: 3px;
+            cursor: pointer;
+            transition: all 0.25s ease 0s;
+
+            color: $text-color;
+            font-family: 'Gilroy-600';
+            font-size: 16px;
+            line-height: 14.364px;
+
+            &:hover {
+                border: 1px solid #a2a2a2b9;
+                color: $secondary-text;
+                font-family: 'Gilroy-600';
+                font-size: 16px;
+                line-height: 14.364px;
+            }
+        }
+        input:checked + label {
+            border: 1px solid $primary-accent;
+            background: $primary-accent;
+            color: #fff;
+            font-family: 'Gilroy-600';
+            font-size: 16px;
+            line-height: 14.364px;
+        }
+    }
+}
