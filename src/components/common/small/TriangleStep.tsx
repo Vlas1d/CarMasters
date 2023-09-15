@@ -2,7 +2,7 @@ import React from "react";
 
 import s from './triangleStep.module.scss';
 
-import triangle from '../../images/svg/triangle.svg';
+import triangle from '../../../images/svg/triangle.svg';
 
 interface TriangleStepProps {
     id: number;

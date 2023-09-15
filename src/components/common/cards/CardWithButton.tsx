@@ -2,7 +2,7 @@ import React from "react";
 
 import s from './cardWithButton.module.scss';
 
-import Button, { Theme } from "./Button";
+import Button, { Theme } from "../small/Button";
 
 interface CardWithButtonProps {
     title: string;

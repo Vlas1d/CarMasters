@@ -3,11 +3,11 @@ import { Link } from 'react-router-dom';
 
 import s from './footer.module.scss';
 
-import logo from '../../images/svg/logo-light.svg';
-import instagram from '../../images/svg/instagram.svg';
-import facebook from '../../images/svg/facebook.svg';
-import youtube from '../../images/svg/youtube.svg';
-import logoId from '../../images/svg/logo-id.svg';
+import logo from '../../../images/svg/logo-light.svg';
+import instagram from '../../../images/svg/instagram.svg';
+import facebook from '../../../images/svg/facebook.svg';
+import youtube from '../../../images/svg/youtube.svg';
+import logoId from '../../../images/svg/logo-id.svg';
 
 
 const Footer = () => {

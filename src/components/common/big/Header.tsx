@@ -2,9 +2,9 @@ import React from "react";
 
 import s from './header.module.scss';
 
-import logo from '../../images/svg/logo.svg';
+import logo from '../../../images/svg/logo.svg';
 
-import Button, { Theme } from "./Button";
+import Button, { Theme } from "../small/Button";
 
 const Header = () => {
     return (

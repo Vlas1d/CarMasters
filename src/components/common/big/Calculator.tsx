@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react";
 
 import s from './calculator.module.scss';
 
-import Range from "./Range";
-import Button, { Theme } from "./Button";
+import Range from "../small/Range";
+import Button, { Theme } from "../small/Button";
 
 const Calculator = () => {
 

@@ -6,16 +6,20 @@ import './style.scss';
 //------------------
 
 //-------components
-import Header from './components/common/Header';
-import Footer from './components/common/Footer';
-import Button, { Theme } from './components/common/Button';
-import TriangleStep from './components/common/TriangleStep';
-import Triangle from './components/common/Triangle';
-import Range from './components/common/Range';
-import Calculator from './components/common/Calculator';
-import MetricCard from './components/common/MetricCard';
-import CardWithButton from './components/common/CardWithButton';
-import CardWithIcon from './components/common/CardWithIcon';
+import Header from './components/common/big/Header';
+import Footer from './components/common/big/Footer';
+import Button, { Theme } from './components/common/small/Button';
+import TriangleStep from './components/common/small/TriangleStep';
+import Triangle from './components/common/cards/Triangle';
+import Range from './components/common/small/Range';
+import Calculator from './components/common/big/Calculator';
+import MetricCard from './components/common/cards/MetricCard';
+import CardWithButton from './components/common/cards/CardWithButton';
+import CardWithIcon from './components/common/cards/CardWithIcon';
+import BlogCard from './components/common/cards/BlogCard';
+import InventoryCard from './components/common/cards/InventoryCard';
+import VideoCard from './components/common/cards/VideoCard';
+import VideoPopUp from './components/modal/VideoPopUp';
 //------------------
 
 //-------images
@@ -23,6 +27,22 @@ import delivery from './images/svg/Delivery.svg';
 import car from './images/svg/Car.svg';
 import finance from './images/svg/Finance.svg';
 import procent from './images/svg/procent.svg';
+
+import blogImg from './images/blog/blog1.webp';
+import inventoryImg from './images/inventory/car1.webp';
+import videoImg from './images/video/video1.webp';
+
+const youtubeVideo: JSX.Element = (
+    <iframe
+        width="100%"
+        height="100%"
+        src="https://www.youtube.com/embed/BBRacI0G0Xs"
+        title="*SOLD* 2018 Chevrolet Cruze LT Hatchback Walkaround, Start up, Tour and Overview"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen>
+    </iframe>
+);
 
 //------------------
 
@@ -64,6 +84,22 @@ const TestComponents = () => {
                     title='What are my interest rate options?'
                     text='We work to secure customized auto loans from Canada’s largest lenders. Your interest rate is critical for determining the total cost of your auto financing. Interest rates are based on many factors including the loan amount, your credit score, and your budget. We help you find the lowest interest rates available for your auto loan.'
                     icon={procent}
+                />
+                <BlogCard
+                    img={blogImg}
+                    date='10 May, 2020'
+                    name='How to save on buying a car? Why is it better to buy from us'
+                />
+                <InventoryCard
+                    img={inventoryImg}
+                    name='Porsche Panamera II Turbo S E-Hybrid'
+                    price={150000}
+                    tegs={['2012 year', 'Sedan', 'Transmission', 'Kilometres']}
+                />
+                <VideoCard
+                    img={videoImg}
+                    name={`VAC's Vehicle Shoot #10: 2018 Chevy Cruze Hatchback`}
+                    iframe={youtubeVideo}
                 />
             </div>
 

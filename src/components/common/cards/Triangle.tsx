@@ -2,7 +2,7 @@ import React from "react";
 
 import s from './triangle.module.scss';
 
-import triangle from '../../images/svg/big-triangle.svg';
+import triangle from '../../../images/svg/big-triangle.svg';
 
 interface TriangleProps {
     image: string;
