@@ -1,0 +1,20 @@
+.blogSliderBox {
+    &__text {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.blogSliderContent {
+
+}
+
+.blogSlider {
+    padding: 60px 0px 40px;
+
+    .swiper-slide {
+        width: auto;
+    }
+
+}

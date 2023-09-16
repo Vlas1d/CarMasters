@@ -23,6 +23,8 @@ import VideoPopUp from './components/modal/VideoPopUp';
 import MainSlider from './components/common/big/MainSlider';
 import QuizRadio from './components/common/QuizRadio';
 import QuizText, { Size } from './components/common/QuizText';
+import BlogSlider from './components/common/big/BlogSlider';
+import AboutUsSlider from './components/common/big/AboutUsSlider';
 //------------------
 
 //-------images
@@ -139,6 +141,8 @@ const TestComponents = () => {
                         ]
                     }
                 />
+                <BlogSlider />
+                <AboutUsSlider />
             </div>
             <MainSlider />
 
