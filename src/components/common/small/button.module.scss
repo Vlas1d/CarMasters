@@ -2,7 +2,7 @@
 
 .button {
     height: 45px;
-    padding: 0px 40px;
+    padding: 0px 39px;
 
     border-radius: 2px;
 
@@ -15,6 +15,15 @@
     transition: width 2s ease 0s;
 
     align-self: flex-start; //-------------------------------------------------------------
+
+    @media(max-width: 600px) {
+        height: 35px;
+        font-size: 14px;
+        letter-spacing: 0.28px;
+    }
+    @media(max-width: 500px) {
+        width: 100%;
+    }
 
     &:hover {
         color: $hover-primary;

@@ -10,6 +10,16 @@
     background: $primary-accent;
     overflow: hidden;
 
+    @media (max-width: 1024px) {
+        height: 725px;
+    }
+    @media (max-width: 550px) {
+        height: 505px;
+        .container {
+            height: 100%;
+        }
+    }
+
     &__road {
         position: absolute;
         top: 0px;
@@ -23,6 +33,7 @@
     h1 {
         color: #fff;
     }
+    
 }
 
 .mainSliderContent {
@@ -31,42 +42,101 @@
     align-items: center;
     justify-content: space-between;
 
+    @media (max-width: 1024px) {
+        height: 725px;
+        justify-content: center;
+    }
+    @media (max-width: 550px) {
+        height: 100%;
+        justify-content: center;
+    }
+
     &__text {
+        transform: translate(0px, -32px);
         max-width: 534px;
         width: 100%;
         h1 {
-            margin-bottom: 60px;
+            margin-bottom: 57px;
+        }
+        @media (max-width: 1024px) {
+            max-width: 90%;
+            height: 70%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center !important;
+            text-align: center;
+            button {
+                align-self: center;
+            }
+            h1 {
+                margin-top: -20px;
+                margin-bottom: 57px;
+            }
+        }
+        @media (max-width: 550px) {
+            transform: translate(0px, -7px);
+            button {
+                transform: translate(0px, -11px);
+            }
         }
     }
 }
 
 .mainSlider {
     display: flex;
-    width: 600px;
+    max-width: 600px;
+    width: 100%;
     border-radius: 100px;
 
-    .swiper-wrapper {
-        
+    @media (max-width: 1024px) {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -37%);
+    }
+    @media (max-width: 550px) {
+        border-radius: 0px;
+        overflow: visible;
     }
     
     .swiper-button-next, .swiper-button-prev {
         position: absolute;
-        top: 45%;
+        top: 47%;
 
         width: 53px !important;
         height: 53px !important;
+        
+        @media (max-width: 550px) {
+            width: 35px !important;
+            height: 35px !important;
+            top: 55%;
+        }
     }
     .swiper-button-prev {
         left: 0px;
-        transform: rotate(180deg);
+        transform: rotate(180deg) translate(0px, 5px);
+        @media (max-width: 550px) {
+            left: -5px;
+            transform: rotate(180deg) translate(0px, 3px);
+        }
         &::after {
             content: url('../../../images/svg/mainSliderNext.svg');
+            @media (max-width: 550px) {
+                content: url('../../../images/svg/mainSliderNextMobile.svg');
+            }
         }
     }
     .swiper-button-next {
         right: 0px;
+        @media (max-width: 550px) {
+            right: -5px;
+        }
         &::after {
             content: url('../../../images/svg/mainSliderNext.svg');
+            @media (max-width: 550px) {
+                content: url('../../../images/svg/mainSliderNextMobile.svg');
+            }
         }
     }
 
@@ -74,5 +144,16 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        img {
+            width: 490px;
+            height: 239px;
+        }
+
+        @media (max-width: 550px) {
+            img {
+                width: 270px;
+                height: 132px;
+            }
+        }
     }
 }

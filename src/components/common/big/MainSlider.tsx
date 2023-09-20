@@ -49,6 +49,7 @@ const MainSlider = () => {
                             navigation={true}
                             modules={[Navigation]}
                             className='mainSlider'
+                            spaceBetween={30}
                             onSlideChange={(swiper) => handleSlideChange(swiper)}
                         >
                             <SwiperSlide><img src={suv} alt="suv" /></SwiperSlide>
