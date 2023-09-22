@@ -7,6 +7,10 @@
     max-width: 487px;
     width: 100%;
 
+    @media (max-width: 550px) {
+        align-items: start;
+    }
+
     &__step {
         position: relative;
         flex-shrink: 0;
@@ -14,6 +18,14 @@
         height: 67px;
 
         margin-right: 20px;
+
+        @media (max-width: 550px) {
+            width: 53px;
+            height: 47px;
+            span {
+                font-size: 20px !important;
+            }
+        }
 
         img {
             width: 100%;
@@ -41,6 +53,14 @@
             font-size: 20px;
             line-height: 25px;
             margin-bottom: 12px !important;
+        }
+        @media (max-width: 550px) {
+            margin-top: -5px;
+            width: 74%;
+            span {
+                font-size: 18px;
+                margin-bottom: 4px !important;
+            }
         }
     }
 }

@@ -53,7 +53,7 @@ const MainSlider = () => {
                             onSlideChange={(swiper) => handleSlideChange(swiper)}
                         >
                             <SwiperSlide><img src={suv} alt="suv" /></SwiperSlide>
-                            <SwiperSlide><img src={car} alt="car" /></SwiperSlide>
+                            <SwiperSlide><img src={van} alt="car" /></SwiperSlide>
                             <SwiperSlide><img src={truck} alt="truck" /></SwiperSlide>
                             <SwiperSlide><img src={van} alt="van" /></SwiperSlide>
                         </Swiper>

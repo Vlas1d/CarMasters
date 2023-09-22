@@ -90,4 +90,9 @@ p {
     padding-right: 24px;
 
     margin: 0px auto;
+
+    @media (max-width: 550px) {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
 }

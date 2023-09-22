@@ -18,7 +18,7 @@ const Triangle = (props: TriangleProps) => {
         <div className={`${s.triangle} ${upsideDown ? s.upsideDown : ''}`}>
             <img src={triangle} alt="triangle" />
             <div className={s.triangle__content}>
-                <img src={image} alt="icon" />
+                <img className={s.icon} src={image} alt="icon" />
                 <span>{title}</span>
                 <p>{text}</p>
             </div>

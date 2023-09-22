@@ -12,12 +12,21 @@ import lexusImg from '../../images/main/Lexus.webp';
 import phoneUnderImg from '../../images/main/phoneUnder.webp';
 import phoneUpperImg from '../../images/main/phoneUpper.webp';
 
+import deliveryImg from '../../images/svg/Delivery.svg';
+import financeImg from '../../images/svg/Finance.svg';
+import carImg from '../../images/svg/car.svg';
+
+import car1Img from '../../images/main/Honda.webp';
+import car2Img from '../../images/main/Corola.webp';
+
 //------------------
 
 //-------components
 const MainSlider = React.lazy(() => import('../../components/common/big/MainSlider'));
 import Preloader from '../../components/modal/Preloader';
 import TriangleStep from '../../components/common/small/TriangleStep';
+import Triangle from '../../components/common/cards/Triangle';
+import Button, { Theme } from '../../components/common/small/Button';
 
 //------------------
 
@@ -44,6 +53,23 @@ const Main = () => {
             'Getting Vehicle',
             'If you love the vehicle, you sign the paperwork and keep the car.'
         ],
+    ];
+    const advantages: Array<Array<string>> = [
+        [
+            deliveryImg,
+            'Vehicle Delivery',
+            'We deliver your vehicle directly to your door. You don’t sign anything until you test drive the vehicle. There is never any obligation to buy beforehand.'
+        ],
+        [
+            financeImg,
+            'Auto Financing',
+            'We partner with the largest lenders in Canada to offer the strongest financing options in the industry—including rates as low as 4%'
+        ],
+        [
+            carImg,
+            'Huge Inventory',
+            'We have access to thousands of high-quality vehicles and offer them to you at wholesale prices. Your dream car is waiting for you'
+        ]
     ]
 
     return (
@@ -82,6 +108,35 @@ const Main = () => {
                         <img className={s.upperImg} src={phoneUpperImg} alt='phone' />
                     </div>
                 </div>
+                <div className={`${s.advantages} container`}>
+                    <h2>Advantages of working with us</h2>
+                    <div className={s.advantages__triangles}>
+                        {
+                            Array.from({ length: advantages.length }).map((_, index) => (
+                                <Triangle
+                                    upsideDown={!(index % 2 === 0) ? true : false}
+                                    image={advantages[index][0]}
+                                    title={advantages[index][1]}
+                                    text={advantages[index][2]}
+                                />
+                            ))
+                        }
+                    </div>
+                </div>
+                <div className={`${s.catalog} container`}>
+                    <div className={s.catalog__images}>
+                        <img src={car1Img} alt='car' />
+                        <img src={car2Img} alt='car' />
+                    </div>
+                    <div className={s.catalog__text}>
+                        <h2>Сhoose your dream vehicle in our catalog</h2>
+                        <div>
+                            <p>In our catalogue there are many models of vehicles. Choose your car to your liking.</p>
+                            <Button text='inventory' theme={Theme.Dark} />
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </>
     );
