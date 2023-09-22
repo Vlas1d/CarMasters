@@ -48,6 +48,11 @@ h4 {
     font-size: 25px;
     line-height: 140%;
     letter-spacing: 0.5px;
+    @media (max-width: 550px) {
+        font-size: 20px;
+        line-height: 140%;
+        letter-spacing: 0.4px;
+    }
 }
 p {
     font-family: 'Gilroy-400';

@@ -338,3 +338,100 @@
         }
     }
 }
+
+.customers {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-template-rows: 50% 50%;
+
+    padding-top: 142px;
+    padding-bottom: 50px;
+
+    @media (max-width: 1024px) and (min-width: 550px) {
+        padding-left: 85px;
+        padding-right: 85px;
+    }
+    @media (max-width: 1024px) {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+        & > * {
+            margin-bottom: 40px;
+        }
+    }
+    @media (max-width: 1024px) {
+        padding-top: 16px;
+        & > * {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__textHead {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+
+        max-width: 549px;
+        width: 100%;
+        h2 {
+            margin-bottom: 21px;
+        }
+        @media (max-width: 1024px) {
+            grid-column: 1 / 3;
+            grid-row: 1 / 2;
+        }
+        @media (max-width: 550px) {
+            h2 {
+                margin-bottom: 11px;
+            }
+        }
+    }
+    &__button {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        max-width: 320px;
+        width: 100%;
+        padding-bottom: 9px;
+
+        button {
+            margin-top: 41px;
+        }
+        @media (max-width: 1024px) {
+            grid-column: 1 / 2;
+            grid-row: 3 / 4;
+        }
+        @media (max-width: 550px) {
+            max-width: 100%;
+            h4 {
+                max-width: 250px;
+            }
+            button {
+                margin-top: 30px;
+            }
+        }
+    }
+    &__cards {
+        grid-column: 2 / 3;
+        grid-row: 1 / 3;
+
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        padding-left: 16.6%;
+
+        gap: 40px;
+        padding-bottom: 20px;
+
+        @media (max-width: 1024px) {
+            grid-column: 1 / 2;
+            grid-row: 2 / 3;
+            padding-left: 0px;
+            padding-bottom: 0px;
+        }
+        @media (max-width: 1024px) {
+            grid-template-columns: 1fr;
+            gap: 9px;
+        }
+    }
+}

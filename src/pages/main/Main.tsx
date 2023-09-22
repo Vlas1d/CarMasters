@@ -27,7 +27,7 @@ import Preloader from '../../components/modal/Preloader';
 import TriangleStep from '../../components/common/small/TriangleStep';
 import Triangle from '../../components/common/cards/Triangle';
 import Button, { Theme } from '../../components/common/small/Button';
-
+import MetricCard from '../../components/common/cards/MetricCard';
 //------------------
 
 const Main = () => {
@@ -134,6 +134,21 @@ const Main = () => {
                             <p>In our catalogue there are many models of vehicles. Choose your car to your liking.</p>
                             <Button text='inventory' theme={Theme.Dark} />
                         </div>
+                    </div>
+                </div>
+                <div className={`${s.customers} container`}>
+                    <div className={s.customers__textHead}>
+                        <h2>Happy customers</h2>
+                        <p>Since 2017, we have helped thousands of Canadians get their dream vehicles from the comfort of their homes.</p>
+                    </div>
+                    <div className={s.customers__button}>
+                        <h4>What are you waiting? Get started right now!</h4>
+                        <Button text='request a car' theme={Theme.Dark} />
+                    </div>
+                    <div className={s.customers__cards}>
+                        <MetricCard num='7,988+' text='Sold Cars' />
+                        <MetricCard num='16,974+' text='Vehicles To Choose From' />
+                        <MetricCard num='123' text='Experts Across Canada' />
                     </div>
                 </div>
 
